@@ -27,8 +27,11 @@ public class Biblioteka implements BibliotekaInterfejs {
 
 	@Override
 	public List<Knjiga> pronadjiKnjigu(Autor autor, long ISBN, String naslov, String izdavac) {
-		// TODO Auto-generated method stub
-		return null;
+		if (autor == null && ISBN <= 0 && naslov == null && izdavac == null)
+			return knjige;
+		else
+			return null;
+
 	}
 
 }
