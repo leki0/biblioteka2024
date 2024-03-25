@@ -26,9 +26,11 @@ public class Biblioteka implements BibliotekaInterfejs {
 	}
 
 	@Override
-	public List<Knjiga> pronadjiKnjigu(Autor autor, long ISBN, String naslov, String izdavac) {
+
+	public List<Knjiga> pronadjiKnjigu(Autor autor, long ISBN, String naslov, String izdavac) throws Exception {
 		if (autor == null && ISBN <= 0 && naslov == null && izdavac == null)
-			return knjige;
+			throw new IllegalArgumentException("Morate uneti bar neki kriterijum za pretragu");
+
 		else
 			return null;
 
