@@ -13,6 +13,6 @@ public interface BibliotekaInterfejs {
 
 	public List<Knjiga> VratiSveKnjige();
 
-	public List<Knjiga> pronadjiKnjigu(Autor autor, long ISBN, String naslov, String izdavac);
+	public List<Knjiga> pronadjiKnjigu(Autor autor, long ISBN, String naslov, String izdavac) throws Exception;
 
 }
